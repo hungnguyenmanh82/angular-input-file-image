@@ -1,0 +1,25 @@
+.preview-layout {
+  height: 70px;
+  width: 80%;
+  overflow-y: scroll;
+  background-color: azure;
+  border-style: solid;
+  border-width: 2px;
+  border-color: blue;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+/* change size of editor here*/
+.editor-layout {
+  width: 80%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: blue;
+  margin-left: 20px;
+}
+
+p {
+  color: blue;
+}
