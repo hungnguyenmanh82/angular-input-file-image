@@ -34,12 +34,19 @@ export class AppComponent implements OnInit {
     const file: File = files.item(0);
 
     $('#preview-native').html(file?.name);
-    const reader = new FileReader();
+    const reader: FileReader = new FileReader();
 
-    // đây là hàm asynchronous => có thể dùng
+    // đây là hàm asynchronous nhận data
     reader.onload = () => {
       this.imageUrlBase64 = reader.result;
     };
+
+    //file này đc đọc asynchronous trả về ở reader.onload function pointer
     reader.readAsDataURL(file);
+
+    // reader.readAsArrayBuffer(file);
+    // reader.readAsBinaryString(file);
+    // reader.readAsText(file);
+    // còn cách khác là dùng formData để upload dữ liệu lên server theo chuẩn (Springboot hỗ trợ phía server)
   }
 }
